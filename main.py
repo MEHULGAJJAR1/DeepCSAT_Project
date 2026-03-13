@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import pandas as pd
 import pickle
-from tensorflow.keras.models import load_model
+# from tensorflow.keras.models import load_model
 import numpy as np
 
 app = Flask(__name__)
@@ -152,6 +152,6 @@ def filter_data():
 
 if __name__ == "__main__":
     app.run(debug=True)
-    
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
