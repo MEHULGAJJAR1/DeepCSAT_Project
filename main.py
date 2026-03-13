@@ -11,8 +11,11 @@ df = pd.read_csv("data/eCommerce_Customer_support_data.csv")
 df = df.fillna("")
 
 # Load ANN model
-model = load_model("models/ann_model.h5", compile=False)
+# model = load_model("models/ann_model.h5", compile=False)
 
+import joblib
+
+model = joblib.load("models/csat_model.pkl")
 # Load scaler + encoders
 scaler = pickle.load(open("models/scaler.pkl","rb"))
 encoders = pickle.load(open("models/encoders.pkl","rb"))
